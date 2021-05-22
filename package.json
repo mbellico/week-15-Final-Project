@@ -1,0 +1,27 @@
+{
+  "name": "week-15-final-project",
+  "version": "0.0.1",
+  "description": "'Automated testing for an e-commerce'",
+  "main": "register.js",
+  "scripts": {
+    "test": "npx wdio run ./wdio.conf.js --spec checkoutFstStep.js"
+  },
+  "repository": {
+    "type": "git + github",
+    "url": "C:/Users/Usuario/Desktop/Radium Rocket/week-15- Final project/.git/ + https://github.com/mbellico/week-15-Final-Project"
+  },
+  "author": "Melisa D. Bellico",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^7.5.7",
+    "@wdio/jasmine-framework": "^7.5.3",
+    "@wdio/local-runner": "^7.5.7",
+    "@wdio/spec-reporter": "^7.5.7",
+    "chromedriver": "^90.0.0",
+    "jasmine": "^3.7.0",
+    "wdio-chromedriver-service": "^7.0.0"
+  },
+  "dependencies": {
+    "@wdio/sync": "^7.5.7"
+  }
+}
