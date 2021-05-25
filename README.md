@@ -42,7 +42,7 @@ Using WebDriver IO to design automated tests for the following website (e-commer
 # "Become a QA Automation week 15 - Final Project"
 
 ## What is the Project about?
-Using WebDriver IO to design automated tests for the following website (e-commerce): 
+Using WebDriver IO to design automated tests for the following website (e-commerce):
 
 [SwagLabs](https://www.saucedemo.com/)
 
@@ -56,8 +56,8 @@ Using WebDriver IO to design automated tests for the following website (e-commer
 * $npm install @wdio/cli
 * $npx wdio config
 
-    *The package.Json should contain the following script:* 
- 
+    *The package.Json should contain the following script:*
+
       "scripts": {
         "test": "npx wdio run ./wdio.conf.js"
       },
