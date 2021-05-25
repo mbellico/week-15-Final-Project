@@ -7,10 +7,10 @@ Using WebDriver IO to design automated tests for every module that the following
 Melisa D. Bellico 
 
 ## Technology stack
-* Node.js (to visit Node.js documentation, please access the following link: [Node.js/docs](https://nodejs.org/es/docs/) )
-* WebDriver IO for automated testing (to visit WebDriverIO documentation, please access the following link: [WebDriverIO/docs](https://webdriver.io/docs/gettingstarted))
+* [Node.js](https://nodejs.org/es/docs/).-
+* [WebDriver IO](https://webdriver.io/docs/gettingstarted) for automated testing.-
 * Google chrome is preferred.-
-* Visual Studio Code or any other code editor is required.-
+* [Visual Studio Code](https://code.visualstudio.com/) or any other code editor is required.-
 
 ## How to install?  (you should use the following commands, either on the git or on the VS console)
 * $ npm install
