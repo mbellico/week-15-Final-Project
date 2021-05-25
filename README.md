@@ -1,7 +1,7 @@
 # "Become a QA Automation week 15 - Final Project"
 
 ## What is the Project about?
-Using WebDriver IO to design automated tests for every module that the following website (e-commerce) contains:[SwagLabs](https://www.saucedemo.com/).
+Using WebDriver IO to design automated tests for every module that the following website (e-commerce) contains: [SwagLabs](https://www.saucedemo.com/).
 
 ## Author: 
 Melisa D. Bellico 
