@@ -1,13 +1,16 @@
 # "Become a QA Automation week 15 - Final Project"
 
 ## What is the Project about?
-Using WebDriver IO to design automated tests for the following website (e-commerce):
+Using WebDriver IO to design automated tests for every module that the following website (e-commerce) contains:[SwagLabs](https://www.saucedemo.com/).
 
-[SwagLabs](https://www.saucedemo.com/)
+## Author: 
+Melisa D. Bellico 
 
 ## Technology stack
 * Node.js (to visit Node.js documentation, please access the following link: [Node.js/docs](https://nodejs.org/es/docs/) )
 * WebDriver IO for automated testing (to visit WebDriverIO documentation, please access the following link: [WebDriverIO/docs](https://webdriver.io/docs/gettingstarted))
+* Google chrome is preferred.-
+* Visual Studio Code or any other code editor is required.-
 
 ## How to install?  (you should use the following commands, either on the git or on the VS console)
 * $ npm install
@@ -21,7 +24,7 @@ Using WebDriver IO to design automated tests for the following website (e-commer
         "test": "npx wdio run ./wdio.conf.js"
       },
 
-## About the tests performed: many bugs were detected.
+## About the tests performed: some bugs were detected.
 
 * Login Page *
 
