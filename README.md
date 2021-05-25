@@ -73,10 +73,14 @@ Using WebDriver IO to design automated tests for the following website (e-commer
 
 1. The user is redirected to the 'checkout' page after pressing the 'checkout' button, even though the cart is empty.
 
-* Checkout first step *
+* Checkout first step page *
 
 1. The checkout form is sent when clicking on the 'Continue' button, even though invalid inputs are provided for name, last name and zip code. No error message is shown, although the user provides numbers or special characters for inputs. When a blank space is left right before the name or last name provided, the form is also successfully sent.
 
-* Checkout second step *
+* Checkout second step page *
 
-1. When the user clicks on the 'cancel' button, the purchase/transaction should be cancelled, and the items errased from the cart. However, the cart remains full. (This is not a bug, but a suggestion)
+1. When the user clicks on the 'cancel' button, the purchase/transaction should be cancelled, and the items errased from the cart. However, the cart remains full. (This is not a bug, but a suggestion).-
+
+* Social Networks page *
+
+1. When clicking on the "Linkedin" icon, the user is not redirected to the SwagLabs site, but to the Linkedin 'create an account' page.
