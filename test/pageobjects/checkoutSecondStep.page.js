@@ -1,5 +1,4 @@
 const page = require ('./page');
-
 class checkoutSecondStepPage extends page {
 
     //Checkout Title
@@ -11,6 +10,7 @@ class checkoutSecondStepPage extends page {
 
     //Form imputs
     get confirmationForm () { return $('.summary_info') }
+    get confirmationItemsForm () { return $('.cart_list') }
     get itemSubt () { return $('div.summary_subtotal_label') }
     get itemTax () { return $('div.summary_tax_label') }
     get itemTotal () { return $('div.summary_total_label') }
@@ -20,5 +20,4 @@ class checkoutSecondStepPage extends page {
         return super.open('checkout-step-two.html');
     }
 }
-
 module.exports = new checkoutSecondStepPage();

@@ -1,5 +1,4 @@
 const page = require ('../pageobjects/page');
-
 class LoginPage extends page {
 
     //login credentials selectors
@@ -8,8 +7,6 @@ class LoginPage extends page {
 
     //buttons selectors
     get btnSubmit () { return $('#login-button') }
-    get btnMenu () {return $('#react-burger-menu-btn')}
-    get btnLogout () {return $('#logout_sidebar_link')}
 
     //alerts selectors
     get alertWrongImput () {return $('.error-message-container.error')}
@@ -22,5 +19,4 @@ class LoginPage extends page {
         this.btnSubmit.click()
     }
 }
-
 module.exports = new LoginPage();

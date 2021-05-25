@@ -1,4 +1,5 @@
 const LoginPage = require ('../pageobjects/login.page');
+const menuPage = require ('../pageobjects/menu.page');
 
 describe('Logging in', () => {
     beforeAll('Open browser', () =>{
@@ -8,10 +9,10 @@ describe('Logging in', () => {
         LoginPage.username.setValue('standard_user')
         LoginPage.password.setValue('secret_sauce')
         LoginPage.submit()
-        expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+        expect(browser.getUrl()).toBe('https://www.saucedemo.com/inventory.html')
         browser.pause(3000)
-        LoginPage.btnMenu.click ()
-        LoginPage.btnLogout.click ()
+        menuPage.btnMenu.click ()
+        menuPage.btnLogout.click ()
     })
     it('should allow user to log in when providing a valid username and a valid password', () => {
         LoginPage.username.setValue('locked_out_user')
@@ -20,7 +21,6 @@ describe('Logging in', () => {
         expect(browser).not.toHaveUrl('https://www.saucedemo.com/inventory.html')
         expect(LoginPage.alertWrongImput).toHaveText('Epic sadface: Sorry, this user has been locked out.')
         browser.pause(3000)
-        //'locked_out_user' does not allow user to log in.
     })
     it('should allow user to log in when providing a valid username and a valid password', () => {
         LoginPage.username.setValue('problem_user')
@@ -28,17 +28,18 @@ describe('Logging in', () => {
         LoginPage.submit()
         expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
         browser.pause(3000)
-        LoginPage.btnMenu.click ()
-        LoginPage.btnLogout.click ()
+        menuPage.btnMenu.click ()
+        menuPage.btnLogout.click ()
     })
     it('should allow user to log in when providing a valid username and a valid password', () => {
         LoginPage.username.setValue('performance_glitch_user')
         LoginPage.password.setValue('secret_sauce')
         LoginPage.submit()
+        browser.pause(3000)
         expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
         browser.pause(3000)
-        LoginPage.btnMenu.click ()
-        LoginPage.btnLogout.click ()
+        menuPage.btnMenu.click ()
+        menuPage.btnLogout.click ()
     })
 });
 describe('Leaving empty fields', () => {
@@ -121,45 +122,5 @@ describe('Providing invalid credentials', () => {
         LoginPage.submit()
         expect(LoginPage.alertWrongImput).toBeDisplayed
         browser.pause(3000)
-    })
-});
-describe('Logging in by pressing the <ENTER> key on the keypad, instead of clicking on the <LOGIN> button', () => {
-    beforeAll('Open browser', () =>{
-		LoginPage.open();
-    })
-    it('should allow user to log in when providing a valid username and a valid password', () => {
-        LoginPage.username.setValue('standard_user')
-        LoginPage.password.setValue('secret_sauce')
-        browser.keys ('Enter')
-        expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
-        browser.pause(3000)
-        LoginPage.btnMenu.click ()
-        LoginPage.btnLogout.click ()
-    })
-    it('should allow user to log in when providing a valid username and a valid password', () => {
-        LoginPage.username.setValue('locked_out_user')
-        LoginPage.password.setValue('secret_sauce')
-        browser.keys ('Enter')
-        expect(LoginPage.alertWrongImput).toBeDisplayed
-        expect(LoginPage.alertWrongImput).toHaveText('Epic sadface: Sorry, this user has been locked out.')
-        browser.pause(3000)
-        //'locked_out_user' does not allow user to log in.
-    })
-    it('should allow user to log in when providing a valid username and a valid password', () => {
-        LoginPage.username.setValue('problem_user')
-        LoginPage.password.setValue('secret_sauce')
-        browser.keys ('Enter')
-        expect(browser).not.toHaveUrl('https://www.saucedemo.com/inventory.html')
-        browser.pause(3000)
-        //'Problem User' does not allow user to log in by pressing on the Enter Key.
-    })
-    it('should allow user to log in when providing a valid username and a valid password', () => {
-        LoginPage.username.setValue('performance_glitch_user')
-        LoginPage.password.setValue('secret_sauce')
-        browser.keys ('Enter')
-        expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
-        browser.pause(3000)
-        LoginPage.btnMenu.click ()
-        LoginPage.btnLogout.click ()
     })
 });

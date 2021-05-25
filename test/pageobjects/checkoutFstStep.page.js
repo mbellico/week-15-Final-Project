@@ -1,5 +1,4 @@
 const page = require ('./page');
-
 class checkoutFstStepPage extends page {
 
     //Checkout Title
@@ -23,5 +22,4 @@ class checkoutFstStepPage extends page {
         return super.open('checkout-step-one.html');
     }
 }
-
 module.exports = new checkoutFstStepPage();
