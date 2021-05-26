@@ -23,6 +23,13 @@ Melisa D. Bellico
       "scripts": {
         "test": "npx wdio run ./wdio.conf.js"
       },
+      
+## Some things to take into account:
+
+#### Page Objects: 
+This folder contains the files in which all the webpage  modules selectors are included.-
+#### Specs: 
+This folder includes the files with all the tests designed.-
 
 ## About the tests performed: some bugs were detected.
 
@@ -46,3 +53,7 @@ Melisa D. Bellico
 **Social Networks Links**
 
 1. When clicking on the Linkedin icon, the user is redirected lo the Linkedin site and asked to register in case they don't already have an account, or login if otherwise. However, the SwagLabs Linkedin page should be displayed instead. 
+
+### Final Comments and thanks :raised_hands:
+
+I'd like to thank the whole Radium Rocket team for giving me the chance of enrolling in this training course, for sharing not only your knowledge but specially your time. Thank you very much to my tutors: Esteban, Santi and Diego, for being always available to answer my queries and questions, for the many hours spent on video calls,  for devoting all your time and patience to share your experience and resources to train me and for giving me all te required tools to improve my skills and grow. Last but not least, thanks to my classmates for all the help and company, for shearing your knowledge and experiences (specially to Mica, Palo and Lucas, my best team ever :smile:)
