@@ -26,12 +26,12 @@ Melisa D. Bellico
       
 ## Some things to take into account:
 
-#### Page Objects: 
+#### Page Objects:
 This folder contains the files in which all the webpage  modules selectors are included.-
-#### Specs: 
+#### Specs:
 This folder includes the files with all the tests designed.-
 
-## About the tests performed: some bugs were detected.
+## About the tests performed: some bugs (or issues to improve) were detected.
 
 **Login Page**
 
@@ -52,7 +52,7 @@ This folder includes the files with all the tests designed.-
 
 **Social Networks Links**
 
-1. When clicking on the Linkedin icon, the user is redirected lo the Linkedin site and asked to register in case they don't already have an account, or login if otherwise. However, the SwagLabs Linkedin page should be displayed instead. 
+1. When clicking on the Linkedin icon, the user is redirected lo the Linkedin site and asked to register in case they don't already have an account, or login if otherwise. However, the SwagLabs Linkedin page should be displayed instead.
 
 ### Final Comments and thanks :raised_hands:
 

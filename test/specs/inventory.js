@@ -132,31 +132,3 @@ describe('adding items to the cart and then removing them, from every item descr
         browser.pause(2000)
     })
 });
-describe('adding items to the cart and then removing them from the inventory page', () => {
-    beforeAll('Open browser', () =>{
-		browser.url('https://www.saucedemo.com');
-        LoginPage.username.setValue ('performance_glitch_user')
-        LoginPage.password.setValue ('secret_sauce')
-        LoginPage.submit ()
-    })
-    it('should add the required item to the cart ', () => {
-        inventoryPage.backpackAddBtn.click ()
-        inventoryPage.bikeLightAddBtn.click ()
-        inventoryPage.boltTShirtAddBtn.click ()
-        inventoryPage.jacketAddBtn.click ()
-        inventoryPage.onesieAddBtn.click ()
-        inventoryPage.redTShirtAddBtn.click ()
-        expect(cartPage.itemsAdded).toHaveText('6')
-        browser.pause(3000)
-    })
-    it('should remove the items from the cart ', () => {
-        inventoryPage.backpackRemoveBtn.click ()
-        inventoryPage.bikeLightRemoveBtn.click ()
-        inventoryPage.boltTShirtRemoveBtn.click ()
-        inventoryPage.jacketRemoveBtn.click ()
-        inventoryPage.onesieRemoveBtn.click ()
-        inventoryPage.redTShirtRemoveBtn.click ()
-        expect(cartPage.itemsAdded).toMatch('')
-        browser.pause(3000)
-    })
-});

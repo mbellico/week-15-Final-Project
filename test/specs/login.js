@@ -1,3 +1,4 @@
+const inventoryPage = require('../pageobjects/inventory.page');
 const LoginPage = require ('../pageobjects/login.page');
 const menuPage = require ('../pageobjects/menu.page');
 
@@ -38,8 +39,39 @@ describe('Logging in', () => {
         browser.pause(3000)
         expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
         browser.pause(3000)
-        menuPage.btnMenu.click ()
-        menuPage.btnLogout.click ()
+    })
+    it('session should remain active when openning a new tab after successfully logging in', () => {
+        browser.newWindow('https://www.saucedemo.com/inventory.html')
+        expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+        browser.pause(3000)
+    })
+    it('session should be finish in both tabs when user logges out from one of them', () => {
+        inventoryPage.open ()
+        browser.newWindow('https://www.saucedemo.com/inventory.html')
+        const handles = browser.getWindowHandles()
+        menuPage.btnMenu.click()
+        browser.pause(1000)
+        menuPage.btnLogout.click()
+        browser.pause(1000)
+        expect(browser).toHaveUrl('https://www.saucedemo.com/')
+        browser.switchToWindow(handles[0])
+        browser.pause(2000)
+        browser.refresh ()
+        expect(browser).toHaveUrl('https://www.saucedemo.com/')
+        browser.pause(3000)
+    })
+    it('session should remain active when logged user closes the window/tab, and opens a new one right after that', () => {
+        inventoryPage.open ()
+        LoginPage.username.setValue('performance_glitch_user')
+        LoginPage.password.setValue('secret_sauce')
+        LoginPage.submit()
+        browser.pause(3000)
+        browser.closeWindow ()
+        browser.pause(1000)
+        browser.switchWindow ('https://www.saucedemo.com/')
+        inventoryPage.open ()
+        expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+        browser.pause(3000)
     })
 });
 describe('Leaving empty fields', () => {
