@@ -4,7 +4,7 @@
 Using WebDriver IO to design automated tests for every module that the following website (e-commerce) contains: [SwagLabs](https://www.saucedemo.com/).
 
 ## Author: 
-Melisa D. Bellico 
+[Melisa D. Bellico](https://www.linkedin.com/in/melisabellico/) 
 
 ## Technology stack
 * [Node.js](https://nodejs.org/es/docs/).-
