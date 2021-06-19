@@ -1,4 +1,4 @@
-# "Become a QA Automation week 15 - Final Project"
+# "Automated testing for SwagLabs website"
 
 ## What is the Project about?
 Using WebDriver IO to design automated tests for every module that the following website (e-commerce) contains: [SwagLabs](https://www.saucedemo.com/).
